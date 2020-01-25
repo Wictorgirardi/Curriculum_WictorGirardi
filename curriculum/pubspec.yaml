@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter_swiper: ^1.1.6
   carousel_slider: ^0.0.7
+  url_launcher: ^5.4.1
+  flare_flutter: ^2.0.1
   flutter:
     sdk: flutter
 

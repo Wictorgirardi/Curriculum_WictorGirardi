@@ -1,9 +1,14 @@
+import 'package:curriculum/experiencias.dart';
+import 'package:curriculum/formacao.dart';
+import 'package:curriculum/linguagens.dart';
+import 'package:curriculum/metodologias.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
+ 
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -24,8 +29,17 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }
+_launchURL() async {
+  const url = 'https://drive.google.com/drive/u/0/folders/1fT02QCvaiVqPeCEb0erBhxLbnVdW16hN';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
 
 class _MyHomePageState extends State<MyHomePage> {
+   
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -103,7 +117,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
-                        new Container(
+                        new GestureDetector(onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Experiencias()),
+                            //builder: (context) => Tutorial()),
+                          );
+                        },
+                        child: new Container(
                           width: 170,
                           height: 80,
                           padding: EdgeInsets.only(left: 0.0, right: 5.0),
@@ -119,23 +141,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                 boxShadow: <BoxShadow>[
                                   new BoxShadow(
                                     color: Colors.red[200],
-                                    blurRadius: 25.0,
+                                    blurRadius: 5.0,
                                     offset: new Offset(0.0, 3.0),
                                   ),
                                 ],
                               ),
                               child: new Center(
-                                child: new Text('Experiências'),
+                                child: new Text(
+                                  'Experiências',
+                                  style: new TextStyle(
+                                    fontSize: 16.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-                        ),
+                        ),),
                       ],
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+                          new GestureDetector(onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Formacao()),
+                            //builder: (context) => Tutorial()),
+                          );
+                        },
+                        child: 
                         new Container(
                           width: 170,
                           height: 80,
@@ -152,17 +190,24 @@ class _MyHomePageState extends State<MyHomePage> {
                                 boxShadow: <BoxShadow>[
                                   new BoxShadow(
                                     color: Colors.blue[200],
-                                    blurRadius: 25.0,
+                                    blurRadius: 5.0,
                                     offset: new Offset(0.0, 3.0),
                                   ),
                                 ],
                               ),
                               child: new Center(
-                                child: new Text('Formação'),
+                                child: new Text(
+                                  'Formação',
+                                  style: new TextStyle(
+                                    fontSize: 16.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-                        ),
+                        ),),
                       ],
                     )
                   ],
@@ -177,6 +222,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+                          new GestureDetector(onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Metodologia()),
+                            //builder: (context) => Tutorial()),
+                          );
+                        },
+                        child:
                         new Container(
                           width: 170,
                           height: 80,
@@ -193,15 +247,22 @@ class _MyHomePageState extends State<MyHomePage> {
                                 boxShadow: <BoxShadow>[
                                   new BoxShadow(
                                     color: Colors.orange[200],
-                                    blurRadius: 25.0,
+                                    blurRadius: 5.0,
                                     offset: new Offset(0.0, 3.0),
                                   ),
                                 ],
                               ),
                               child: new Center(
-                                child: new Text('Metodologias'),
+                                child: new Text(
+                                  'Metodologias',
+                                  style: new TextStyle(
+                                    fontSize: 16.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
                               ),
-                            ),
+                            ),),
                           ),
                         ),
                       ],
@@ -210,40 +271,79 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+                          new GestureDetector(onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Linguagem()),
+                            //builder: (context) => Tutorial()),
+                          );
+                        },
+                        child:
                         new Container(
                           width: 170,
                           height: 80,
                           padding: EdgeInsets.only(left: 5.0, right: 00.0),
                           child: new Card(
-                             color: Colors.green[200],
+                            color: Colors.purple[200],
                             child: new Container(
                               padding: new EdgeInsets.all(20.0),
                               decoration: BoxDecoration(
-                                color: Colors.green[200],
+                                color: Colors.purple[200],
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(5.0),
                                 ),
                                 boxShadow: <BoxShadow>[
                                   new BoxShadow(
-                                    color: Colors.green[200],
-                                    blurRadius: 25.0,
+                                    color: Colors.purple[200],
+                                    blurRadius: 5.0,
                                     offset: new Offset(0.0, 3.0),
                                   ),
                                 ],
                               ),
                               child: new Center(
-                                child: new Text('Linguagens'),
+                                child: new Text(
+                                  'Linguagens',
+                                  style: new TextStyle(
+                                    fontSize: 16.0,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
-                        ),
+                        ),),
                       ],
                     ),
                     new Padding(
                       padding: EdgeInsets.only(top: 50.0),
-                    ),     
+                    ),
                   ],
-                )
+                ),
+                new Padding(
+                  padding: EdgeInsets.only(top: 40.0),
+                ),
+                new MaterialButton(
+                    height: 20.0,
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(6.0),
+                    ),
+                    minWidth: 350.0,
+                    color: Colors.transparent,
+                    textColor: Colors.white,
+                    child: new Text(
+                      "Visualizar Curriculo em PDF",
+                      style: new TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    onPressed: _launchURL),
+                new Padding(
+                  padding: EdgeInsets.only(top: 40.0),
+                ),
               ]),
         ]),
       ),
