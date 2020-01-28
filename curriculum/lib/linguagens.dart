@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flare_flutter/flare_actor.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class Linguagem extends StatefulWidget {
   @override
@@ -30,7 +31,7 @@ class _LinguagemState extends State<Linguagem> {
                           new Container(
                             padding: EdgeInsets.only(left: 20.0),
                             child: new Text(
-                              "Formação",
+                              "Linguagens",
                               style: new TextStyle(
                                 fontSize: 32.0,
                                 color: Colors.white,
@@ -40,7 +41,7 @@ class _LinguagemState extends State<Linguagem> {
                           ),
                         ],
                       ),
-                       new Padding(
+                      new Padding(
                         padding: EdgeInsets.only(top: 20.0),
                       ),
                       new Row(
@@ -58,7 +59,7 @@ class _LinguagemState extends State<Linguagem> {
                         ],
                       ),
                       new Padding(
-                        padding: EdgeInsets.only(top: 20.0),
+                        padding: EdgeInsets.only(top: 40.0),
                       ),
                       new Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -74,15 +75,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Avançado",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                          new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.70,
+                            center: Text("70.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.blueAccent,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -97,17 +101,20 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Básico",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
                           ),
-                          new Padding(
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.3,
+                            center: Text("30.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.yellowAccent,
+                          ),
+                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
                           ),
                           Text(
@@ -120,17 +127,20 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Médio",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
                           ),
-                          new Padding(
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.4,
+                            center: Text("40.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.redAccent,
+                          ),
+                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
                           ),
                           Text(
@@ -143,15 +153,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Médio",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.6,
+                            center: Text("60.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.greenAccent,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -166,15 +179,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Médio",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.5,
+                            center: Text("50.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.purpleAccent,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -189,15 +205,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Básico",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.4,
+                            center: Text("40.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.tealAccent,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -212,15 +231,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Básico",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.2,
+                            center: Text("20.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.greenAccent,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -235,15 +257,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Avançado",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.8,
+                            center: Text("80.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.blueAccent,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -258,15 +283,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Avançado",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.7,
+                            center: Text("70.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.yellowAccent,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -281,15 +309,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Básico",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.1,
+                            center: Text("10.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.redAccent,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -304,15 +335,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Básico",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.2,
+                            center: Text("20.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.tealAccent,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -327,15 +361,18 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Médio",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
+                          ),
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.4,
+                            center: Text("40.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.brown,
                           ),
                           new Padding(
                             padding: EdgeInsets.only(top: 20.0),
@@ -350,17 +387,20 @@ class _LinguagemState extends State<Linguagem> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            "Conhecimento Básico",
-                            maxLines: 20,
-                            textAlign: TextAlign.center,
-                            style: new TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                            ),
+                            new Padding(
+                            padding: EdgeInsets.only(top: 10.0),
                           ),
-                           new Padding(
+                          new LinearPercentIndicator(
+                            //width: MediaQuery.of(context).size.width - 50,
+                            animation: true,
+                            lineHeight: 20.0,
+                            animationDuration: 2000,
+                            percent: 0.4,
+                            center: Text("40.0%"),
+                            linearStrokeCap: LinearStrokeCap.roundAll,
+                            progressColor: Colors.greenAccent,
+                          ),
+                          new Padding(
                             padding: EdgeInsets.only(top: 20.0),
                           ),
                         ],
